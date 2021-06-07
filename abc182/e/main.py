@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
 
+import random
+
 H, W, N, M = map(int,(input().split()))
 # ABs = []
 # CDs = []
@@ -62,9 +64,9 @@ for j in range(W):
             grid[i][j] = 1
 
 # 探索方向↑
-for j in range(W)[::-1]:
+for j in range(W):
     enlighten = False
-    for i in range(H):
+    for i in range(H)[::-1]:
         if grid[i][j] == 2:
             enlighten = True
         if grid[i][j] == -1:
